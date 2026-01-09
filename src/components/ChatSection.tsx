@@ -23,7 +23,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PromptHistory } from "./PromptHistory";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-
+import { Sidebar } from "./Sidebar";
 export function ChatSection({
   themeMode = "night",
 }: {
@@ -204,8 +204,7 @@ export function ChatSection({
   const removeHistoryItem = (id: string) => {
     setPromptHistory((prev) => prev.filter((item) => item.id !== id));
     setMessages((prev) => prev.filter((msg) => msg.id !== id));
-  };
-
+    };
 
  return (
   <motion.div

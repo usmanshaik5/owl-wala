@@ -59,9 +59,9 @@ export function HistorySection({
         <h2 className="font-black uppercase tracking-widest text-sm">
           History
         </h2>
-        <Button variant="ghost" size="icon" onClick={onClear}>
+        {/* <Button variant="ghost" size="icon" onClick={onClear}>
           <Trash2 className="w-4 h-4" />
-        </Button>
+        </Button> */}
       </div>
 
       {/* LIST */}
