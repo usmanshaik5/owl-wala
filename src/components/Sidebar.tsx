@@ -238,8 +238,13 @@ export function Sidebar({
 
         {/* Clear Data */}
         <div className="pt-8">
-          <button
-            onClick={() => onClearAll?.()}
+         <button
+  onClick={() => {
+    onClose?.();          // 1️⃣ close sidebar
+    setTimeout(() => {
+      onClearAll?.();     // 2️⃣ then clear / popup
+    }, 150);
+  }}
             className={cn(
               "w-full flex items-center gap-4 px-4 py-4 rounded-2xl transition-all duration-500",
               themeMode === "night"
